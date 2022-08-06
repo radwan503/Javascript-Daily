@@ -64,10 +64,6 @@ for (const product of products) {
 totalCount.textContent = 'Total Amount »' + totalInitial;
 
 
-
-
-
-
 // 2nd Example
 // let displayMenu = products.map((product) => {
 //   return `
@@ -94,3 +90,30 @@ totalCount.textContent = 'Total Amount »' + totalInitial;
 // });
 
 // card.innerHTML = displayMenu;
+
+
+
+// seach product
+let searchValue;
+const searchInput = document.querySelector('.product-search')
+const searchValueName = document.querySelector('.search-value-name');
+
+searchInput.addEventListener('keyup', function (e) {
+  if (e.which == 13) {
+    searchValue = searchInput.value;
+    searchProduct(products, searchValue)
+    searchInput.value = '';
+  }
+})
+
+
+function searchProduct(products, searchText) {
+  const matched = [];
+  for (const product of products) {
+    const name = product.name;
+    if (name.indexOf(searchText) != -1) {
+      matched.push(product.name)
+    }
+  }
+  searchValueName.innerHTML = matched;
+}
