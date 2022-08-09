@@ -1,3 +1,4 @@
+// product json
 const products = [
   {
     name: 'laptop',
@@ -25,14 +26,13 @@ const products = [
   },
 ];
 
-
+// inser product in card container
 const card = document.querySelector('#cardVal');
 const totalCount = document.querySelector('.total');
 let totalInitial = 0;
 for (const product of products) {
   let createSingleCard = document.createElement('DIV');
   createSingleCard.classList.add('single-card');
-
   let cardContent = `
   <div class="col">
     <div class="card shadow-sm" id="cardSingle">
@@ -61,6 +61,7 @@ for (const product of products) {
   //totalInitial = totalInitial + product.price * product.quantity;
 }
 
+// Add product price and pices in total button
 const btns = document.querySelectorAll('#addToCart');
 let totalCost = 0;
 for (const btn of btns) {
@@ -75,7 +76,7 @@ for (const btn of btns) {
   })
 }
 
-//total show in top
+//total show
 totalCount.textContent = 'Total Amount » ' + totalCost;
 
 
@@ -83,25 +84,34 @@ totalCount.textContent = 'Total Amount » ' + totalCost;
 let searchValue;
 const searchInput = document.querySelector('.product-search')
 const searchValueName = document.querySelector('.search-value-name');
-
+// null check and search
 searchInput.addEventListener('keyup', function (e) {
   if (e.which == 13) {
-    searchValue = searchInput.value;
-    searchProduct(products, searchValue)
-    searchInput.value = '';
+    if (searchInput.value == '') {
+      searchInput.style.borderColor = 'red';
+      searchValueName.innerText = "Please Enter Your Search Keyword"
+    } else {
+      searchValue = searchInput.value;
+      searchInput.style.borderColor = 'black'
+      searchProduct(products, searchValue)
+      searchInput.value = '';
+    }
   }
+
 })
 
-
+// search product
 function searchProduct(products, searchText) {
   const matched = [];
   for (const product of products) {
     const name = product.name;
     if (name.indexOf(searchText) != -1) {
       matched.push(product.name)
+      searchValueName.innerHTML = "This Search value Match -- " + matched;
+    } else {
+      searchValueName.innerText = "Search Value Not Found"
     }
   }
-  searchValueName.innerHTML = matched;
 }
 
 
