@@ -45,10 +45,7 @@ for (const product of products) {
             <button type="button" class="btn btn-sm btn-outline-secondary" id="addToCart">Add to Cart</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
           </div>
-
           <h1 class="card-title pricing-card-title">$<span id="price"> ${product.price}</span><small class="text-muted fw-light">/mo</small></h1><br>
-          
-        
         </div>
       </div>
     </div>
