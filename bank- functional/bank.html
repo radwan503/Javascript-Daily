@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="py-20">
+   <header class="px-10">
+      <h1 class="text-3xl font-bold underline mb-8">
+         Bank Page
+      </h1>
+   </header>
+
+   <main class="px-10">
+      <section>
+         <div class="grid grid-cols-3 gap-4 text-white">
+            <div class="bg-green-300 p-8 rounded">
+               <h3 class="text-xl">Deposit</h3>
+               <h4 class="text-3xl">$<span id="deposit-total">00</span></h4>
+            </div>
+
+            <div class="bg-orange-300 p-8 rounded">
+               <h3 class="text-xl">withdraw</h3>
+               <h4 class="text-3xl">$<span id="withdraw-total">00</span></h4>
+            </div>
+
+            <div class="bg-red-300 p-8 rounded">
+               <h3 class="text-xl">Balance</h3>
+               <h4 class="text-3xl">$<span id="balance-total">00</span></h4>
+            </div>
+         </div>
+      </section>
+
+      <section class="py-5">
+         <div class="grid grid-cols-3 gap-4">
+            <div>
+               <h3 class="text-xl text-black-50">Please deposit</h3>
+               <div>
+                  <input class="border-2 px-3" type="text" name="" id="deposit-input">
+                  <button type="submit" id="deposit-btn"
+                     class="bg-yellow-300 px-5 py-2 rounded text-white block mt-2">Deposit</button>
+               </div>
+            </div>
+
+            <div>
+               <h3 class="text-xl">Please withdraw</h3>
+               <div>
+                  <input class="border-2 px-3" type="text" name="" id="withdraw-input">
+                  <button type="submit" id="withdraw-btn"
+                     class="bg-red-300 px-5 py-2 rounded text-white block mt-2">Withdraw</button>
+               </div>
+            </div>
+
+         </div>
+      </section>
+
+      <p class="mt-20">NB: Add this project using Local Storage</p>
+   </main>
+   <script src="./banking.js"></script>
+</body>
+
+</html>
