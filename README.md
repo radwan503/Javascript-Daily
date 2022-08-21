@@ -7,6 +7,6 @@
 <p>For Each</p>
 
 ### Live site example<br>
-- <p>Modal open://modalopen.netlify.app/</p>
+- <p>Modal open : https://modalopen.netlify.app/</p>
 
 
