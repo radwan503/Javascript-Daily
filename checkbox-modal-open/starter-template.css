@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f9f9ff;
+}
+
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  float: right;
 }
 
 .switch input {
