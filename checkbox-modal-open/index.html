@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Starter Template · Bootstrap v5.0</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        Open Modal Based on Checkbox
+      </a>
+    </header>
+
+    <main>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="">
+            <h5>User Define Option</h5>
+            <p>Enable to define options</p>
+            <ul class="user-define-list list-group list-group-flush">
+              <li class="list-group-item">
+                Undefined Option 1
+                <label class="switch">
+                  <input type="checkbox" class="define-checkbox" checked="checked">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <li class="list-group-item">
+                Undefined Option 2
+                <label class="switch ">
+                  <input type="checkbox" class="define-checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <li class="list-group-item">
+                Undefined Option 3
+                <label class="switch ">
+                  <input type="checkbox" class="define-checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <li class="list-group-item">
+                Undefined Option 4
+                <label class="switch ">
+                  <input type="checkbox" class="define-checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <li class="list-group-item">
+                Undefined Option 5
+                <label class="switch ">
+                  <input type="checkbox" class="define-checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+              <li class="list-group-item">
+                Undefined Option 6
+                <label class="switch ">
+                  <input type="checkbox" class="define-checkbox">
+                  <span class="slider round"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  </main>
+  </div>
+
+  <div class="modal fade" id="userDefineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form:form id="userDefineForm" name="horizontalForm" class="form-horizontal row" role="form" method="POST">
+            <fieldset>
+              <div class="form-group">
+                <div class="col-md-12">
+                  <input id="userDefine" name="user-define" class="form-control" placeholder="Option" value="fsdfsdf">
+                </div>
+              </div>
+              <fieldset>
+
+          </form:form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript">
+
+    const switchBtn = document.querySelectorAll('.define-checkbox')
+    switchBtn.forEach(function (btn) {
+      $(btn).click(function (e) {
+        const question = e.currentTarget.parentElement.parentElement;
+        if (e.target.checked) {
+          $('#userDefineModal').modal('show')
+          $('#userDefine').val(question.innerText)
+
+        }
+      })
+    });
+  </script>
+
+</body>
+
+</html>
