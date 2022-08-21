@@ -4,5 +4,9 @@
 <p>Event bubble and propagation</p>
 <p>Event Delegation</p>
 <p>HTML Tag Revision</p>
+<p>For Each</p>
 
-https://modalopen.netlify.app/
+### Live site example<br>
+- <p>Modal open://modalopen.netlify.app/</p>
+
+
