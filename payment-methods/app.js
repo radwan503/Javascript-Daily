@@ -1,6 +1,7 @@
 // get form id 
 const paymentMethod = document.getElementById('paymentMethod');
 const cardNumber = document.getElementById('cardNumber');
+const cardAmount = document.getElementById('cardAmount');
 const currentDate = document.getElementById('currentDate');
 const cardVerificationValueCode = document.getElementById('cardVerificationValueCode');
 const cardName = document.getElementById('cardName');
@@ -14,10 +15,12 @@ submitBtn.addEventListener('click', function () {
       const visaCardId = document.getElementById('visaCardId');
       const visaCardExpiryDate = document.getElementById('visaCardExpiryDate');
       const visaCardName = document.getElementById('visaCardName');
+      const visaCardAmount = document.getElementById('visaCardAmount');
 
       visaCardId.innerHTML = cardNumber.value;
       visaCardExpiryDate.innerText = currentDate.value;
       visaCardName.innerText = cardName.value;
+      visaCardAmount.innerText = cardAmount.value
 
    } else if (paymentMethod.value === 'mastercard') {
 
@@ -25,10 +28,12 @@ submitBtn.addEventListener('click', function () {
       const masterCardId = document.getElementById('masterCardId');
       const masterCardExpiryDate = document.getElementById('masterCardExpiryDate');
       const masterCardName = document.getElementById('masterCardName');
+      const masterCardAmount = document.getElementById('masterCardAmount');
 
       masterCardId.innerHTML = cardNumber.value;
       masterCardExpiryDate.innerText = currentDate.value;
       masterCardName.innerText = cardName.value;
+      masterCardAmount.innerText = cardAmount.value
 
    } else if (paymentMethod.value === 'discover') {
 
@@ -36,11 +41,15 @@ submitBtn.addEventListener('click', function () {
       const discoveryCardId = document.getElementById('discoveryCardId');
       const discoveryCardExpiryDate = document.getElementById('discoveryCardExpiryDate');
       const discoveryCardName = document.getElementById('discoveryCardName');
+      const discoveryCardAmount = document.getElementById('discoveryCardAmount');
 
       discoveryCardId.innerHTML = cardNumber.value;
       discoveryCardExpiryDate.innerText = currentDate.value;
       discoveryCardName.innerText = cardName.value;
+      discoveryCardAmount.innerText = cardAmount.value
 
+   } else {
+      alert('please select payment method')
    }
 
 

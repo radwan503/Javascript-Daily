@@ -18,7 +18,7 @@
 
 <body>
 
-  <div class="col-lg-8 mx-auto p-3 py-md-5">
+  <div class="col-lg-10 mx-auto p-3 py-md-5">
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="brand-javascript-daily" src="./assets/brand/logo.png" alt="javascript-daily logo">
@@ -37,10 +37,14 @@
               <div class="number  mt-3">
                 <label id="visaCardId" class="fw-bold" for="">**** **** **** 1060</label>
               </div>
-              <div class="d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="visaCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">amount:</span><span id="visaCardAmount">100000</span></small>
+              </div>
+              <div class="mt-2">
                 <small><span class="fw-bold">Name:</span><span id="visaCardName">Kumar</span></small>
               </div>
+
             </div>
           </div>
           <div class="col-lg-4 mb-lg-0 mb-3">
@@ -53,8 +57,12 @@
               <div class="number mt-3">
                 <label id="masterCardId" class="fw-bold">**** **** **** 1060</label>
               </div>
-              <div class="d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="masterCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">amount:</span><span id="masterCardAmount">100000</span></small>
+              </div>
+
+              <div class="mt-2">
                 <small><span class="fw-bold">Name:</span><span id="masterCardName">Kumar</span></small>
               </div>
             </div>
@@ -68,8 +76,11 @@
               <div class="number mt-3">
                 <label id="discoveryCardId" class="fw-bold">**** **** **** 1060</label>
               </div>
-              <div class="d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="discoveryCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">amount:</span><span id="discoveryCardAmount">100000</span></small>
+              </div>
+              <div class="mt-2">
                 <small><span class="fw-bold">Name:</span><span id="discoveryCardName">Kumar</span></small>
               </div>
             </div>
@@ -155,10 +166,17 @@
                             </div>
                           </div>
 
-                          <div class="col-12">
+                          <div class="col-6">
                             <div class="form__div">
                               <input id="cardNumber" type="text" class="form-control px-3" placeholder=" ">
                               <label for="" class="form__label">Card Number</label>
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <div class="form__div">
+                              <input id="cardAmount" type="text" class="form-control px-3" placeholder=" ">
+                              <label for="" class="form__label">Amount</label>
                             </div>
                           </div>
 
