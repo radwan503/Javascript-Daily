@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.84.0">
-  <title>Bootstrap 5 Payment form with payment methods</title>
+  <title>Payment form with payment methods</title>
 
   <!-- Bootstrap core CSS -->
   <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="brand-javascript-daily" src="./assets/brand/logo.png" alt="javascript-daily logo">
-        <span class="fs-4 px-3">Payment form</span>
+        <span class="fs-4 px-3">Payment form vanilla javascript</span>
       </a>
     </header>
 
@@ -34,12 +34,12 @@
               <div class="img-box">
                 <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
               </div>
-              <div class="number">
-                <label class="fw-bold" for="">**** **** **** 1060</label>
+              <div class="number  mt-3">
+                <label id="visaCardId" class="fw-bold" for="">**** **** **** 1060</label>
               </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-                <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+              <div class="d-flex flex-column">
+                <small><span class="fw-bold">Expiry date:</span><span id="visaCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">Name:</span><span id="visaCardName">Kumar</span></small>
               </div>
             </div>
           </div>
@@ -50,12 +50,12 @@
                   src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
                   alt="">
               </div>
-              <div class="number">
-                <label class="fw-bold">**** **** **** 1060</label>
+              <div class="number mt-3">
+                <label id="masterCardId" class="fw-bold">**** **** **** 1060</label>
               </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-                <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+              <div class="d-flex flex-column">
+                <small><span class="fw-bold">Expiry date:</span><span id="masterCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">Name:</span><span id="masterCardName">Kumar</span></small>
               </div>
             </div>
           </div>
@@ -65,12 +65,12 @@
                 <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
                   alt="">
               </div>
-              <div class="number">
-                <label class="fw-bold">**** **** **** 1060</label>
+              <div class="number mt-3">
+                <label id="discoveryCardId" class="fw-bold">**** **** **** 1060</label>
               </div>
-              <div class="d-flex align-items-center justify-content-between">
-                <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
-                <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+              <div class="d-flex flex-column">
+                <small><span class="fw-bold">Expiry date:</span><span id="discoveryCardExpiryDate">10/16</span></small>
+                <small><span class="fw-bold">Name:</span><span id="discoveryCardName">Kumar</span></small>
               </div>
             </div>
           </div>
@@ -145,11 +145,11 @@
 
                           <div class="col-12">
                             <div class="form__div">
-                              <select class="form-control px-3">
+                              <select id="paymentMethod" class="form-control px-3">
                                 <option selected>Please Select your Card</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="discover">Discover</option>
                               </select>
 
                             </div>
@@ -157,32 +157,33 @@
 
                           <div class="col-12">
                             <div class="form__div">
-                              <input type="text" class="form-control" placeholder=" ">
+                              <input id="cardNumber" type="text" class="form-control px-3" placeholder=" ">
                               <label for="" class="form__label">Card Number</label>
                             </div>
                           </div>
 
                           <div class="col-6">
                             <div class="form__div">
-                              <input type="text" class="form-control" placeholder=" ">
-                              <label for="" class="form__label">MM / yy</label>
+                              <input id="currentDate" type="text" class="form-control px-3" placeholder=" ">
+                              <label for="" class="form__label">DD / MM / yy</label>
                             </div>
                           </div>
 
                           <div class="col-6">
                             <div class="form__div">
-                              <input type="password" class="form-control" placeholder=" ">
+                              <input id="cardVerificationValueCode" type="password" class="form-control px-3"
+                                placeholder=" ">
                               <label for="" class="form__label">cvv code</label>
                             </div>
                           </div>
                           <div class="col-12">
                             <div class="form__div">
-                              <input type="text" class="form-control" placeholder=" ">
+                              <input id="cardName" type="text" class="form-control px-3" placeholder=" ">
                               <label for="" class="form__label">name on the card</label>
                             </div>
                           </div>
                           <div class="col-12">
-                            <div class="btn btn-primary w-100">Sumbit</div>
+                            <div id="submitBtn" class="btn btn-primary w-100 rounded-0">Sumbit</div>
                           </div>
                         </div>
                       </form>
@@ -206,6 +207,7 @@
   </div>
 
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
