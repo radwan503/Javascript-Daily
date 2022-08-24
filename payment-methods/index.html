@@ -39,10 +39,10 @@
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="visaCardExpiryDate">10/16</span></small>
-                <small><span class="fw-bold">amount:</span><span id="visaCardAmount">100000</span></small>
+                <small><span class="fw-bold">Withdraw:</span><span id="visaCardAmount">0000</span></small>
               </div>
               <div class="mt-2">
-                <small><span class="fw-bold">Name:</span><span id="visaCardName">Kumar</span></small>
+                <small><span class="fw-bold">Name:</span><span id="visaCardName">John David</span></small>
               </div>
 
             </div>
@@ -59,11 +59,11 @@
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="masterCardExpiryDate">10/16</span></small>
-                <small><span class="fw-bold">amount:</span><span id="masterCardAmount">100000</span></small>
+                <small><span class="fw-bold">Withdraw:</span><span id="masterCardAmount">0000</span></small>
               </div>
 
               <div class="mt-2">
-                <small><span class="fw-bold">Name:</span><span id="masterCardName">Kumar</span></small>
+                <small><span class="fw-bold">Name:</span><span id="masterCardName">Liam Olivia</span></small>
               </div>
             </div>
           </div>
@@ -78,10 +78,10 @@
               </div>
               <div class="d-flex align-items-center justify-content-between">
                 <small><span class="fw-bold">Expiry date:</span><span id="discoveryCardExpiryDate">10/16</span></small>
-                <small><span class="fw-bold">amount:</span><span id="discoveryCardAmount">100000</span></small>
+                <small><span class="fw-bold">Withdraw:</span><span id="discoveryCardAmount">0000</span></small>
               </div>
               <div class="mt-2">
-                <small><span class="fw-bold">Name:</span><span id="discoveryCardName">Kumar</span></small>
+                <small><span class="fw-bold">Name:</span><span id="discoveryCardName">James Ava</span></small>
               </div>
             </div>
           </div>
@@ -136,12 +136,14 @@
                   <div class="row">
                     <div class="col-lg-5 mb-lg-0 mb-3">
                       <p class="h4 mb-0">Summary</p>
-                      <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
-                          product</span>
+                      <p class="mb-0"><span class="fw-bold">Card Name: </span><span class="c-green text-capitalize"
+                          id="summaryName">:
+                          Name of
+                          Card</span>
                       </p>
                       <p class="mb-0">
-                        <span class="fw-bold">Price:</span>
-                        <span class="c-green">:$452.90</span>
+                        <span class="fw-bold">Balance: $</span>
+                        <span class="c-green" id="currentAmount">452.90</span>
                       </p>
                       <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
                         nihil neque
@@ -176,7 +178,7 @@
                           <div class="col-6">
                             <div class="form__div">
                               <input id="cardAmount" type="text" class="form-control px-3" placeholder=" ">
-                              <label for="" class="form__label">Amount</label>
+                              <label for="" class="form__label">Withdraw Amount</label>
                             </div>
                           </div>
 
@@ -211,11 +213,11 @@
               </div>
             </div>
           </div>
-          <div class="col-12">
+          <!-- <div class="col-12">
             <div class="btn btn-primary payment">
               Make Payment
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </main>

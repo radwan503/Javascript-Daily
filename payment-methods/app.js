@@ -6,9 +6,13 @@ const currentDate = document.getElementById('currentDate');
 const cardVerificationValueCode = document.getElementById('cardVerificationValueCode');
 const cardName = document.getElementById('cardName');
 const submitBtn = document.getElementById('submitBtn');
+const currentAmount = document.getElementById('currentAmount');
+const summaryName = document.getElementById('summaryName');
 
 //get form value click submit
 submitBtn.addEventListener('click', function () {
+
+
 
    if (paymentMethod.value === 'visa') {
       //insert form value in visa card
@@ -17,10 +21,19 @@ submitBtn.addEventListener('click', function () {
       const visaCardName = document.getElementById('visaCardName');
       const visaCardAmount = document.getElementById('visaCardAmount');
 
+
       visaCardId.innerHTML = cardNumber.value;
       visaCardExpiryDate.innerText = currentDate.value;
       visaCardName.innerText = cardName.value;
-      visaCardAmount.innerText = cardAmount.value
+      visaCardAmount.innerText = cardAmount.value;
+
+      // balance 
+      const currentBalance = parseFloat(currentAmount.innerText)
+      console.log(currentBalance)
+      const balanceTotal = currentBalance - cardAmount.value;
+      console.log(balanceTotal)
+      currentAmount.innerText = balanceTotal;
+      summaryName.innerText = cardName.value
 
    } else if (paymentMethod.value === 'mastercard') {
 
@@ -33,7 +46,15 @@ submitBtn.addEventListener('click', function () {
       masterCardId.innerHTML = cardNumber.value;
       masterCardExpiryDate.innerText = currentDate.value;
       masterCardName.innerText = cardName.value;
-      masterCardAmount.innerText = cardAmount.value
+      masterCardAmount.innerText = cardAmount.value;
+
+      // balance 
+      const currentBalance = parseFloat(currentAmount.innerText)
+      console.log(currentBalance)
+      const balanceTotal = currentBalance - cardAmount.value;
+      console.log(balanceTotal)
+      currentAmount.innerText = balanceTotal;
+      summaryName.innerText = cardName.value
 
    } else if (paymentMethod.value === 'discover') {
 
@@ -48,9 +69,33 @@ submitBtn.addEventListener('click', function () {
       discoveryCardName.innerText = cardName.value;
       discoveryCardAmount.innerText = cardAmount.value
 
+
+      // balance 
+      const currentBalance = parseFloat(currentAmount.innerText)
+      console.log(currentBalance)
+      const balanceTotal = currentBalance - cardAmount.value;
+      console.log(balanceTotal)
+      currentAmount.innerText = balanceTotal;
+      summaryName.innerText = cardName.value
+
    } else {
       alert('please select payment method')
    }
 
-
 })
+
+
+// chage balance based on card type
+
+paymentMethod.addEventListener('change', function () {
+   if (paymentMethod.value === 'visa') {
+      currentAmount.innerText = '320'
+   } else if (paymentMethod.value === 'mastercard') {
+      currentAmount.innerText = '1500'
+   } else if (paymentMethod.value === 'discover') {
+      currentAmount.innerText = '500'
+   }
+})
+
+
+
