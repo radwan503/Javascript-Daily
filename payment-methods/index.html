@@ -155,12 +155,12 @@
                         iste harum ipsum hic, nemo qui!</p>
                     </div>
                     <div class="col-lg-7">
-                      <form action="" class="form">
+                      <form action="#" class="form">
                         <div class="row">
 
                           <div class="col-12">
                             <div class="form__div">
-                              <select id="paymentMethod" class="form-control px-3">
+                              <select id="paymentMethod" class="form-control px-3" required>
                                 <option selected>Please Select your Card</option>
                                 <option value="visa">Visa</option>
                                 <option value="mastercard">Mastercard</option>
@@ -172,21 +172,21 @@
 
                           <div class="col-6">
                             <div class="form__div">
-                              <input id="cardNumber" type="text" class="form-control px-3" placeholder=" ">
+                              <input id="cardNumber" type="text" class="form-control px-3" placeholder=" " required>
                               <label for="" class="form__label">Card Number</label>
                             </div>
                           </div>
 
                           <div class="col-6">
                             <div class="form__div">
-                              <input id="cardAmount" type="text" class="form-control px-3" placeholder=" ">
+                              <input id="cardAmount" type="text" class="form-control px-3" placeholder=" " required>
                               <label for="" class="form__label">Withdraw Amount</label>
                             </div>
                           </div>
 
                           <div class="col-6">
                             <div class="form__div">
-                              <input id="currentDate" type="text" class="form-control px-3" placeholder=" ">
+                              <input id="currentDate" type="text" class="form-control px-3" placeholder=" " required>
                               <label for="" class="form__label">DD / MM / yy</label>
                             </div>
                           </div>
@@ -194,18 +194,18 @@
                           <div class="col-6">
                             <div class="form__div">
                               <input id="cardVerificationValueCode" type="password" class="form-control px-3"
-                                placeholder=" ">
+                                placeholder=" " required>
                               <label for="" class="form__label">cvv code</label>
                             </div>
                           </div>
                           <div class="col-12">
                             <div class="form__div">
-                              <input id="cardName" type="text" class="form-control px-3" placeholder=" ">
+                              <input id="cardName" type="text" class="form-control px-3" placeholder=" " required>
                               <label for="" class="form__label">name on the card</label>
                             </div>
                           </div>
                           <div class="col-12">
-                            <div id="submitBtn" class="btn btn-primary w-100 rounded-0">Sumbit</div>
+                            <button id="submitBtn" type="" class="btn btn-primary w-100 rounded-0">Sumbit</button>
                           </div>
                         </div>
                       </form>

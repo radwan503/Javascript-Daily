@@ -54,4 +54,9 @@ document.getElementById('case-plus').addEventListener('click', function () {
 document.getElementById('case-minus').addEventListener('click', function () {
    updateproductNumber('case', 59, false)
 
+});
+
+const checkOut = document.getElementById('check-out');
+checkOut.addEventListener('click', function () {
+   window.location.href = 'checkout.html'
 })

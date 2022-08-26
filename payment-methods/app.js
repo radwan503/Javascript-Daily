@@ -12,8 +12,6 @@ const summaryName = document.getElementById('summaryName');
 //get form value click submit
 submitBtn.addEventListener('click', function () {
 
-
-
    if (paymentMethod.value === 'visa') {
       //insert form value in visa card
       const visaCardId = document.getElementById('visaCardId');
@@ -33,7 +31,8 @@ submitBtn.addEventListener('click', function () {
       const balanceTotal = currentBalance - cardAmount.value;
       console.log(balanceTotal)
       currentAmount.innerText = balanceTotal;
-      summaryName.innerText = cardName.value
+      summaryName.innerText = cardName.value;
+
 
    } else if (paymentMethod.value === 'mastercard') {
 
@@ -81,6 +80,7 @@ submitBtn.addEventListener('click', function () {
    } else {
       alert('please select payment method')
    }
+
 
 })
 
