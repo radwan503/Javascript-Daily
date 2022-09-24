@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.84.0">
-  <title>Bootstrap 5 Payment form with payment methods</title>
+  <title>Work with json placholder | javascript | bootstrap</title>
 
   <!-- Bootstrap core CSS -->
   <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,119 @@
 
     <main>
       <div class="container px-0">
-        <div id="postList"></div>
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+              type="button" role="tab" aria-controls="pills-home" aria-selected="true">Post
+              List</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+              type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Comment Fetch</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+              type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Post Create</button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-update-tab" data-bs-toggle="pill" data-bs-target="#pills-update"
+              type="button" role="tab" aria-controls="pills-update" aria-selected="false">Post Update</button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-filter-tab" data-bs-toggle="pill" data-bs-target="#pills-filter"
+              type="button" role="tab" aria-controls="pills-filter" aria-selected="false">Filter</button>
+          </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div id="postList"></div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <form class="row g-3 mb-3">
+              <div class="col">
+                <label for="commentByPost" class="visually-hidden">Password</label>
+                <input type="text" class="form-control" id="commentByPost"
+                  placeholder="Search comment by post id(Ex: 2)" required>
+              </div>
+              <div class="col-auto">
+                <button id="searchComment" type="button" class="btn btn-primary mb-3">Search</button>
+              </div>
+            </form>
+            <div id="commentList"></div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+            <div class="card px-5 py-5 shadow border-0">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="idInput" class="form-label">User Id</label>
+                    <input type="text" class="form-control" id="idInput">
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="titleInput" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="titleInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="bodyInput" class="form-label">Body</label>
+                    <textarea class="form-control" id="bodyInput" rows="3"></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="postSubmit">Submit</button>
+                </form>
+
+                <div id="postDataView" class="mt-3"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="pills-update" role="tabpanel" aria-labelledby="pills-update-tab">
+            <div class="card px-5 py-5 shadow border-0">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="updateIdInput" class="form-label">User Id</label>
+                    <input type="text" class="form-control" id="updateIdInput" value="" readonly>
+
+                  </div>
+                  <div class="mb-3">
+                    <label for="updateTitleInput" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="updateTitleInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="updateBodyInput" class="form-label">Body</label>
+                    <textarea class="form-control" id="updateBodyInput" rows="3"></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="updateSubmit">Update</button>
+                </form>
+
+                <div id="postDataView" class="mt-3"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="pills-filter" role="tabpanel" aria-labelledby="pills-filter-tab">
+            <h2>Filterable List</h2>
+            <p>Type something in the input field to search the list for specific items:</p>
+            <p>This will return all the posts that belong to the user ID</p>
+            <input class="form-control" id="filterInput" type="number" placeholder="Search..">
+            <br>
+            <ol class="list-group list-group-numbered" id="filterList">
+
+            </ol>
+          </div>
+
+        </div>
+
       </div>
     </main>
     <footer class="pt-5 my-5 text-muted border-top">

@@ -28,3 +28,22 @@ function displayData(data) {
    }
 
 }
+
+
+// post
+function postData() {
+   fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+         title: 'What You learn',
+         body: 'Learning Fetcthing api',
+         userId: 1
+      }),
+      headers: {
+         'Content-type': 'application/json; charset=UTF-8',
+      },
+
+   })
+      .then(response => response.json())
+      .then(data => console.log(data))
+}
