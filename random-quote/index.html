@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>How to create a random quote with js</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!-- Custom styles for this template -->
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <img class="brand-javascript-daily" src="./assets/brand/logo.png" alt="javascript-daily logo">
+        <span class="fs-4 px-3">Random Quote</span>
+      </a>
+    </header>
+
+    <main>
+      <div class="container px-0">
+        <div class="card text-center border-0 shadow py-5">
+          <div class="card-body">
+            <figure class="text-center">
+              <blockquote class="blockquote">
+                <p id="displayQuote">A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Kanye West</cite>
+              </figcaption>
+            </figure>
+            <button class="btn btn-primary" type="button" onclick="createQuote()">Random Quote</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+      <i class="fa-solid fa-heart text-danger"></i> by radwan; &copy; 2022
+    </footer>
+  </div>
+
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/dist/js/api.js"></script>
+</body>
+
+</html>
