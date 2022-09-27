@@ -5,6 +5,7 @@ const createQuote = () => {
 }
 
 const displayData = (data) => {
+   console.log(data)
    const displayQuote = document.getElementById('displayQuote');
    displayQuote.innerText = data.quote;
 }
