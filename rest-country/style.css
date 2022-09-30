@@ -21,3 +21,7 @@ body {
   background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
   background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
 }
+
+.flag-img {
+  height: 165px;
+}
