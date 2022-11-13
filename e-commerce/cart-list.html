@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>E-commerce Using Vanilla Javascript With Fake API</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!-- Custom styles for this template -->
+  <link href="./assets/dist/css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <header class="container d-flex align-items-center my-5">
+    <a href="https://github.com/radwan503/Javascript-Daily"
+      class="d-flex align-items-center text-dark text-decoration-none">
+      <img class="brand-javascript-daily" src="./assets/brand/logo.png" alt="javascript-daily logo">
+      <span class="fs-4 px-3">E-commerce Using Vanilla Javascript</span>
+    </a>
+  </header>
+
+  <main>
+    <div class="container d-flex align-items-center ">
+      <div class="py-5 p-5 mb-4 bg-light rounded-3">
+        <h1 class="display-5 fw-bold">Example Of Product Add</h1>
+        <p class="col-md-8 fs-4">But We Dont Show proper way to add and update example of product.Beacuse api only give
+          a id not its product full object.</p>
+        <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+          New Product</button>
+      </div>
+    </div>
+    <div class="container ">
+        <div class="bg-white rounded-top mt-5" id="zero-pad">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12 col-12 pt-3">
+                    <div class="d-flex flex-column pt-4">
+                        <div><h5 class="text-uppercase font-weight-normal">shopping bag</h5></div>
+                        <div class="font-weight-normal">2 items</div>
+                    </div>
+                 
+                    <div class="d-flex flex-row justify-content-between align-items-center pt-lg-4 pt-2 pb-3 border-bottom mobile">
+                        <div class="d-flex flex-row align-items-center">
+                            <div><img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" width="150" height="150" alt="" id="image"></div>
+                            <div class="d-flex flex-column pl-md-3 ps-4">
+                                <div><h6>COTTON T-SHIRT</h6></div>
+                                <div >Art.No:<span class="ps-2">091091001</span></div>
+                                <div>Color:<span class="ps-3">White</span></div>
+                                <div>Size:<span class="ps-4"> M</span></div>
+                            </div>                    
+                        </div>
+                        <div class="pl-md-0 ps-1"><b>$9.99</b></div>
+                        <div class="pl-md-0 ps-2">
+                            <span class="fa fa-minus-square text-secondary"></span><span class="px-md-3 px-1">2</span><span class="fa fa-plus-square text-secondary"></span>
+                        </div>
+                        <div class="pl-md-0 ps-1"><b>$19.98</b></div>
+                        <div class="close"><button class="btn border-dark border-1">&times;</button></div>
+                    </div>
+                    
+        
+                </div>
+            </div>
+        </div>
+        <div class="bg-light rounded-bottom py-4" id="zero-pad">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10 col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <button class="btn btn-sm bg-light border border-dark">GO BACK</button>
+                        </div>
+                        <div class="px-md-0 px-1" id="footer-font">
+                            <b class="pl-md-4">SUBTOTAL<span class="pl-md-4">$61.78</span></b>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm bg-dark text-white px-lg-5 px-3">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+
+ 
+  <footer class="container my-5">
+    <i class="fa-solid fa-heart text-danger"></i> by radwan; &copy; 2022
+  </footer>
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+   
+   const fetchProduct = () =>{
+      fetch('https://fakestoreapi.com/carts')
+      .then(response => response.json())
+      .then(products => console.log(products))
+   }
+
+   fetchProduct()
+
+
+
+  </script>
+</body>
+
+</html>

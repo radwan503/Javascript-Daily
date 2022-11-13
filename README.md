@@ -12,3 +12,4 @@
 - <p>Country List Show Using Vanilla Javascript | Fetching API: https://country-list-example-vanilla-js.netlify.app/ </p>
 - <p>Country Search Using Vanilla Javascript | Fetching API: https://country-search-using-vanilla-js.netlify.app/</p>
 - <p>E-commerce Example Using Vanilla Javascript With fakestoreapi | Fetching API: https://e-commerce-example-using-javascript.netlify.app/</p>
+- <p>Add to Cart Example Using Vanilla Javascript | LocalStorage: https://addtocart-js.netlify.app/</p>
