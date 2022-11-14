@@ -1,6 +1,6 @@
 const API_KEY = `cb3cbec10a758d422968f443863720c8`;
 
-//get location based on search
+//get temp based on search
 const searchTemperature = () => {
 
    const cityName = document.getElementById('cityName').value;
@@ -13,14 +13,20 @@ const searchTemperature = () => {
 }
 
 const displayTemperature = (data) => {
-   console.log(data)
+   console.log(data);
    document.getElementById('locationId').innerText = data.name;
    document.getElementById('temperatureId').innerText = data.main.temp;
    document.getElementById('temperatureTypeId').innerText = data.weather[0].main;
+
+
+   const imageUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+   document.getElementById('weatherIcon').setAttribute('src', imageUrl);
+
+
 }
 
 
-// get location based on lat and long
+// get teamp based on lat and long
 const getLocation = () => {
    if (navigator.geolocation) {
       navigator.geolocation.watchPosition(showPosition)
@@ -42,6 +48,9 @@ const displayTemperaturebasOnLatLong = (data) => {
    document.getElementById('locationId').innerText = data.name;
    document.getElementById('temperatureId').innerText = data.main.temp;
    document.getElementById('temperatureTypeId').innerText = data.weather[0].main;
+
+   const imageUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+   document.getElementById('weatherIcon').setAttribute('src', imageUrl);
 }
 
 
